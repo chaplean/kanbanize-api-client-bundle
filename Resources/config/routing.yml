@@ -1,0 +1,3 @@
+#kanbanize_client_index:
+#    path: /
+#    defaults: { _controller: ChapleanKanbanizeClientBundle:Default:index }

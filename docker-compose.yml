@@ -1,0 +1,23 @@
+version: '2'
+services:
+    application:
+        container_name: kanbanize_client_bundle_app
+        build: .
+        volumes:
+            - .:/var/www/symfony
+        links:
+            - mysql:mysql
+    mysql:
+        container_name: kanbanize_client_bundle_mysql
+        image: chaplean/mysql:mariadb10.1
+        volumes:
+            - mysql_data:/var/lib/mysql:rw
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: app_user
+            MYSQL_PASSWORD: app_password
+            MYSQL_DATABASE: test_database
+networks: {}
+volumes:
+    mysql_data: ~
