@@ -1,1 +1,10 @@
-#services:
+services:
+    _defaults:
+        autowire: true
+        public: true
+
+    Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApiV1:
+        arguments:
+            $client: '@eight_points_guzzle.client.kanbanize_api_v1'
+            $urlPrefix: '%chaplean_kanbanize_api_v1.url%'
+            $apikey: '%chaplean_kanbanize_api_v1.apikey'

@@ -2,6 +2,9 @@
 /bin
 /vendor
 
+# auth
+auth.json
+
 # Assets and user uploads
 /web/bundles/
 /web/uploads/

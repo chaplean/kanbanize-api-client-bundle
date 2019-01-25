@@ -1,6 +1,6 @@
 # ⚠ Bundle in progress ⚠
 
-# ChapleanKanbanizeClientBundle
+# ChapleanKanbanizeApiClientBundle
 
 > CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/[projectname]/issues)
 
@@ -22,16 +22,43 @@
 
 You can use [composer](https://getcomposer.org) to install [projectname]:
 ```bash
-composer require chaplean/kanbanize-client-bundle
+composer require chaplean/kanbanize-api-client-bundle
 ```
 
 ## Configuration
 
+#### Import config
+
+```yaml
+imports:
+    - { resource: '@ChapleanKanbanizeApiClientBundle/Resources/config/config.yml' }
+```
+
+#### Define parameters
+
+In your `parameters.yml`
+
+```yaml
+chaplean_kanbanize_api_v1.url: 'kanbanize url api'
+chaplean_kanbanize_api_v1.apikey: 'your apikey'
+```
+
 ## Usage
+
+Available api:
+* https://kanbanize.com/api/#get_projects_and_boards
+* https://kanbanize.com/api/#get_board_structure
+* https://kanbanize.com/api/#get_full_board_structure
+* https://kanbanize.com/api/#get_board_settings
+* https://kanbanize.com/api/#get_board_activities
+* https://kanbanize.com/api/#create_new_task
+* https://kanbanize.com/api/#get_task_details
+* https://kanbanize.com/api/#get_all_tasks
+* https://kanbanize.com/api/#get_log_time_activities
 
 ## Versioning
 
-[projectname] follows [semantic versioning](https://semver.org/). In short the scheme is MAJOR.MINOR.PATCH where
+kanbanize-api-client-bundle follows [semantic versioning](https://semver.org/). In short the scheme is MAJOR.MINOR.PATCH where
 1. MAJOR is bumped when there is a breaking change,
 2. MINOR is bumped when a new feature is added in a backward-compatible way,
 3. PATCH is bumped when a bug is fixed in a backward-compatible way.
@@ -64,7 +91,7 @@ bin/phpunit
 
 ## License
 
-kanbanize-client-bundle is distributed under the terms of the MIT license.
+kanbanize-api-client-bundle is distributed under the terms of the MIT license.
 
 [comment]: # (Contributions must be made available under the same license.)
 
