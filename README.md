@@ -45,16 +45,40 @@ chaplean_kanbanize_api_v1.apikey: 'your apikey'
 
 ## Usage
 
-Available api:
-* https://kanbanize.com/api/#get_projects_and_boards
-* https://kanbanize.com/api/#get_board_structure
-* https://kanbanize.com/api/#get_full_board_structure
-* https://kanbanize.com/api/#get_board_settings
-* https://kanbanize.com/api/#get_board_activities
-* https://kanbanize.com/api/#create_new_task
-* https://kanbanize.com/api/#get_task_details
-* https://kanbanize.com/api/#get_all_tasks
-* https://kanbanize.com/api/#get_log_time_activities
+You can use 2 versions of the API.
+
+Version 1: `KanbanizeApiV1` (see: https://kanbanize.com/api)
+
+Available routes:
+
+| Method | Description |
+| :--- | :--- |
+| getProjectsAndBoards()   | Get projects and boards     |
+| postBoardStructure()     | Get board structure         |
+| postFullBoardStructure() | Get full board structure    |
+| postBoardSettings()      | Get board settings          |
+| postBoardActivities()    | Get board activities        |
+| postCreateTask()         | Create a new task           |
+| postTaskDetails()        | Get details for one task    |
+| postTasksDetails()       | Get details for many task   |
+| postAllTasks()           | Get all tasks for one board |
+| postLogTimeActivities()  | Create a new task           |
+
+Version 2 (beta): `KanbanizeApi` (see: https://\<your team>.kanbanize.com/openapi/#/)
+
+Available functions:
+
+| Method | Description |
+| :--- | :--- |
+| getChildCards()        | Get a list of child cards                 |
+| putChildCard()         | Make a card a child of a given card       |
+| getParentCards()       | Get a list of parent cards                |
+| putParentCard()        | Make a card a parent of a given card      |
+| getPredecessorCards()  | Get a list of predecessor cards           |
+| putPredecessorCard()   | Make a card a predecessor of a given card |
+| getSuccessorCards()    | Get a list of successor cards             |
+| putSuccessorCard()     | Make a card a successor of a given card   |
+
 
 ## Versioning
 

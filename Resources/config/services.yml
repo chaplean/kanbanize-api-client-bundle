@@ -7,4 +7,10 @@ services:
         arguments:
             $client: '@eight_points_guzzle.client.kanbanize_api_v1'
             $urlPrefix: '%chaplean_kanbanize_api_v1.url%'
-            $apikey: '%chaplean_kanbanize_api_v1.apikey'
+            $apikey: '%chaplean_kanbanize_api.apikey'
+
+    Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApi:
+        arguments:
+            $client: '@eight_points_guzzle.client.kanbanize_api'
+            $urlPrefix: '%chaplean_kanbanize_api.url%'
+            $apikey: '%chaplean_kanbanize_api.apikey'

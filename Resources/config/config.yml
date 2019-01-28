@@ -2,3 +2,5 @@ eight_points_guzzle:
     clients:
         kanbanize_api_v1:
             options: "%kanbanize_api_v1.options%"
+        kanbanize_api:
+            options: "%kanbanize_api.options%"
