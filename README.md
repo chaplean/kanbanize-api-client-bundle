@@ -2,7 +2,7 @@
 
 # ChapleanKanbanizeApiClientBundle
 
-> CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/[projectname]/issues)
+> CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/kanbanize-api-client-bundle/issues)
 
 
 
