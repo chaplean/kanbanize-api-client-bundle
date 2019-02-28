@@ -51,6 +51,16 @@ class KanbanizeApiTest extends MockeryTestCase
     /**
      * @return void
      */
+    public function testGetBoards(): void
+    {
+        $response = $this->api->getBoards()->exec();
+
+        $this->assertNotInstanceOf(InvalidParameterResponse::class, $response);
+    }
+
+    /**
+     * @return void
+     */
     public function testGetChildCardsMissingUrlParameter(): void
     {
         $response = $this->api->getChildCards()->exec();

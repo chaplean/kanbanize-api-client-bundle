@@ -11,6 +11,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 /**
  * Class KanbanizeApi.
  *
+ * @method Route getBoards()            Get a list of boards                       ( #/Boards/getBoards )
  * @method Route getChildCards()        Get a list of child cards                  ( #/Child_Cards/getChildCards )
  * @method Route putChildCard()         Make a card a child of a given card        ( #/Child_Cards/addChildCard )
  * @method Route getParentCards()       Get a list of parent cards                 ( #/Parent_Cards/getParentCards )
@@ -62,6 +63,23 @@ class KanbanizeApi extends AbstractApi
                 'apikey' => Parameter::string()->defaultValue($this->apikey)
             ])
             ->urlPrefix($this->urlPrefix);
+
+        // Boards
+
+        $this->get('boards', '/boards')
+            ->queryParameters([
+                'board_ids'                       => Parameter::arrayList(Parameter::int())->optional(),
+                'project_ids'                     => Parameter::arrayList(Parameter::int())->optional(),
+                'is_archived'                     => Parameter::enum([0, 1])->optional(),
+                'if_assigned'                     => Parameter::enum([0, 1])->optional(),
+                'cards_workflow_exists'           => Parameter::enum([0, 1])->optional(),
+                'cards_workflow_is_enabled'       => Parameter::enum([0, 1])->optional(),
+                'initiatives_workflow_exists'     => Parameter::enum([0, 1])->optional(),
+                'initiatives_workflow_is_enabled' => Parameter::enum([0, 1])->optional(),
+                'fields'                          => Parameter::enum(['board_id', 'project_id', 'is_archived', 'name'])->optional(),
+                'expand'                          => Parameter::arrayList(Parameter::string())->optional()
+            ]);
+
 
         // Child cards
 
