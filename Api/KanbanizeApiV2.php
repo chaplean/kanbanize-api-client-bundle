@@ -9,7 +9,7 @@ use GuzzleHttp\ClientInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
- * Class KanbanizeApi.
+ * Class KanbanizeApiV2.
  *
  * @method Route getBoards()            Get a list of boards                       ( #/Boards/getBoards )
  * @method Route getChildCards()        Get a list of child cards                  ( #/Child_Cards/getChildCards )
@@ -25,7 +25,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  * @author    Valentin - Chaplean <valentin@chaplean.coop>
  * @copyright 2014 - 2018 Chaplean (http://www.chaplean.coop)
  */
-class KanbanizeApi extends AbstractApi
+class KanbanizeApiV2 extends AbstractApi
 {
     /** @var string */
     private $apikey;

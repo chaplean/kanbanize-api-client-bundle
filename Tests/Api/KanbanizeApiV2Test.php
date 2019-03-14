@@ -3,7 +3,7 @@
 namespace Chaplean\Bundle\KanbanizeApiClientBundle\Tests\Api;
 
 use Chaplean\Bundle\ApiClientBundle\Api\Response\Failure\InvalidParameterResponse;
-use Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApi;
+use Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApiV2;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
@@ -16,9 +16,9 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  * @author    Valentin - Chaplean <valentin@chaplean.coop>
  * @copyright 2014 - 2019 Chaplean (http://www.chaplean.coop)
  */
-class KanbanizeApiTest extends MockeryTestCase
+class KanbanizeApiV2Test extends MockeryTestCase
 {
-    /** @var KanbanizeApi */
+    /** @var KanbanizeApiV2 */
     private $api;
 
     /**
@@ -34,12 +34,12 @@ class KanbanizeApiTest extends MockeryTestCase
         $client->shouldReceive('request')->andReturn(new Response());
         $eventDispatcher->shouldReceive('dispatch');
 
-        $this->api = new KanbanizeApi($client, $eventDispatcher, 'prefix/', 'apikey');
+        $this->api = new KanbanizeApiV2($client, $eventDispatcher, 'prefix/', 'apikey');
     }
 
     /**
-     * @covers \Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApi::__construct
-     * @covers \Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApi::buildApi
+     * @covers \Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApiV2::__construct
+     * @covers \Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApiV2::buildApi
      *
      * @return void
      */
