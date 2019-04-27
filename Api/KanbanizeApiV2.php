@@ -11,15 +11,15 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 /**
  * Class KanbanizeApiV2.
  *
- * @method Route getBoards()            Get a list of boards                       ( #/Boards/getBoards )
- * @method Route getChildCards()        Get a list of child cards                  ( #/Child_Cards/getChildCards )
- * @method Route putChildCard()         Make a card a child of a given card        ( #/Child_Cards/addChildCard )
- * @method Route getParentCards()       Get a list of parent cards                 ( #/Parent_Cards/getParentCards )
- * @method Route putParentCard()        Make a card a parent of a given card       ( #/Parent_Cards/addParentCard )
- * @method Route getPredecessorCards()  Get a list of predecessor cards            ( #/Predecessor_Cards/getPredecessorCards )
- * @method Route putPredecessorCard()   Make a card a predecessor of a given card  ( #/Predecessor_Cards/addPredecessorCard )
- * @method Route getSuccessorCards()    Get a list of successor cards              ( #/Successor_Cards/getSuccessorCards )
- * @method Route putSuccessorCard()     Make a card a successor of a given card    ( #/Successor_Cards/addSuccessorCard )
+ * @method Route getBoards()            Get a list of boards                       ( https://dev.kanbanize.com/api/#/Boards/getBoards )
+ * @method Route getChildCards()        Get a list of child cards                  ( https://dev.kanbanize.com/api/#/Child_Cards/getChildCards )
+ * @method Route putChildCard()         Make a card a child of a given card        ( https://dev.kanbanize.com/api/#/Child_Cards/addChildCard )
+ * @method Route getParentCards()       Get a list of parent cards                 ( https://dev.kanbanize.com/api/#/Parent_Cards/getParentCards )
+ * @method Route putParentCard()        Make a card a parent of a given card       ( https://dev.kanbanize.com/api/#/Parent_Cards/addParentCard )
+ * @method Route getPredecessorCards()  Get a list of predecessor cards            ( https://dev.kanbanize.com/api/#/Predecessor_Cards/getPredecessorCards )
+ * @method Route putPredecessorCard()   Make a card a predecessor of a given card  ( https://dev.kanbanize.com/api/#/Predecessor_Cards/addPredecessorCard )
+ * @method Route getSuccessorCards()    Get a list of successor cards              ( https://dev.kanbanize.com/api/#/Successor_Cards/getSuccessorCards )
+ * @method Route putSuccessorCard()     Make a card a successor of a given card    ( https://dev.kanbanize.com/api/#/Successor_Cards/addSuccessorCard )
  *
  * @package   Chaplean\Bundle\KanbanizeApiClientBundle\Api
  * @author    Valentin - Chaplean <valentin@chaplean.coop>
