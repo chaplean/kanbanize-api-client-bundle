@@ -27,20 +27,14 @@ composer require chaplean/kanbanize-api-client-bundle
 
 ## Configuration
 
-#### Import config
-
-```yaml
-imports:
-    - { resource: '@ChapleanKanbanizeApiClientBundle/Resources/config/config.yml' }
-```
-
 #### Define parameters
 
 In your `parameters.yml`
 
 ```yaml
-chaplean_kanbanize_api_v1.url: 'kanbanize url api'
-chaplean_kanbanize_api_v1.apikey: 'your apikey'
+chaplean_kanbanize_api_v1.url: 'kanbanize url api (v1)'
+chaplean_kanbanize_api_v2.url: 'kanbanize url api (v2)'
+chaplean_kanbanize_api.apikey: 'your apikey'
 ```
 
 ## Usage
@@ -64,7 +58,7 @@ Available routes:
 | postAllTasks()           | Get all tasks for one board |
 | postLogTimeActivities()  | Create a new task           |
 
-Version 2 (beta): `KanbanizeApi` (see: https://\<your team>.kanbanize.com/openapi/#/)
+Version 2 (beta): `KanbanizeApiV2` (see: https://\<your team>.kanbanize.com/openapi/#/)
 
 Available functions:
 

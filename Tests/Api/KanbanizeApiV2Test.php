@@ -14,7 +14,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  *
  * @package   Chaplean\Bundle\KanbanizeApiClientBundle\Tests\Api
  * @author    Valentin - Chaplean <valentin@chaplean.coop>
- * @copyright 2014 - 2019 Chaplean (http://www.chaplean.coop)
+ * @copyright 2014 - 2019 Chaplean (https://www.chaplean.coop)
  */
 class KanbanizeApiV2Test extends MockeryTestCase
 {
