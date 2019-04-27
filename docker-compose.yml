@@ -1,14 +1,14 @@
-version: '2'
+version: "3.3"
 services:
     application:
-        container_name: kanbanize_client_bundle_app
+        container_name: kanbanize_api_client_bundle_app
         build: .
         volumes:
             - .:/var/www/symfony
         links:
             - mysql:mysql
     mysql:
-        container_name: kanbanize_client_bundle_mysql
+        container_name: kanbanize_api_client_bundle_mysql
         image: chaplean/mysql:mariadb10.1
         volumes:
             - mysql_data:/var/lib/mysql:rw

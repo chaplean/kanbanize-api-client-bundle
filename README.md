@@ -1,8 +1,8 @@
 # ⚠ Bundle in progress ⚠
 
-# ChapleanKanbanizeClientBundle
+# ChapleanKanbanizeApiClientBundle
 
-> CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/[projectname]/issues)
+> CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/kanbanize-api-client-bundle/issues)
 
 
 
@@ -22,16 +22,61 @@
 
 You can use [composer](https://getcomposer.org) to install [projectname]:
 ```bash
-composer require chaplean/kanbanize-client-bundle
+composer require chaplean/kanbanize-api-client-bundle
 ```
 
 ## Configuration
 
+#### Define parameters
+
+In your `parameters.yml`
+
+```yaml
+chaplean_kanbanize_api_v1.url: 'kanbanize url api (v1)'
+chaplean_kanbanize_api_v2.url: 'kanbanize url api (v2)'
+chaplean_kanbanize_api.apikey: 'your apikey'
+```
+
 ## Usage
+
+You can use 2 versions of the API.
+
+Version 1: `KanbanizeApiV1` (see: https://kanbanize.com/api)
+
+Available routes:
+
+| Method | Description |
+| :--- | :--- |
+| getProjectsAndBoards()   | Get projects and boards     |
+| postBoardStructure()     | Get board structure         |
+| postFullBoardStructure() | Get full board structure    |
+| postBoardSettings()      | Get board settings          |
+| postBoardActivities()    | Get board activities        |
+| postCreateTask()         | Create a new task           |
+| postTaskDetails()        | Get details for one task    |
+| postTasksDetails()       | Get details for many task   |
+| postAllTasks()           | Get all tasks for one board |
+| postLogTimeActivities()  | Create a new task           |
+
+Version 2 (beta): `KanbanizeApiV2` (see: https://\<your team>.kanbanize.com/openapi/#/)
+
+Available functions:
+
+| Method | Description |
+| :--- | :--- |
+| getChildCards()        | Get a list of child cards                 |
+| putChildCard()         | Make a card a child of a given card       |
+| getParentCards()       | Get a list of parent cards                |
+| putParentCard()        | Make a card a parent of a given card      |
+| getPredecessorCards()  | Get a list of predecessor cards           |
+| putPredecessorCard()   | Make a card a predecessor of a given card |
+| getSuccessorCards()    | Get a list of successor cards             |
+| putSuccessorCard()     | Make a card a successor of a given card   |
+
 
 ## Versioning
 
-[projectname] follows [semantic versioning](https://semver.org/). In short the scheme is MAJOR.MINOR.PATCH where
+kanbanize-api-client-bundle follows [semantic versioning](https://semver.org/). In short the scheme is MAJOR.MINOR.PATCH where
 1. MAJOR is bumped when there is a breaking change,
 2. MINOR is bumped when a new feature is added in a backward-compatible way,
 3. PATCH is bumped when a bug is fixed in a backward-compatible way.
@@ -64,7 +109,7 @@ bin/phpunit
 
 ## License
 
-kanbanize-client-bundle is distributed under the terms of the MIT license.
+kanbanize-api-client-bundle is distributed under the terms of the MIT license.
 
 [comment]: # (Contributions must be made available under the same license.)
 

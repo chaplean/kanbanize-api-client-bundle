@@ -1,8 +1,8 @@
 {
-    "name": "chaplean/kanbanize-client-bundle",
+    "name": "chaplean/kanbanize-api-client-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
-    "description": "The Bundle base to fork",
+    "description": "Kanbanize Api client",
     "authors": [
         {
             "name": "Chaplean",
@@ -11,31 +11,26 @@
     ],
     "autoload": {
         "psr-4": {
-            "Chaplean\\Bundle\\KanbanizeClientBundle\\": ""
+            "Chaplean\\Bundle\\KanbanizeApiClientBundle\\": ""
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Chaplean\\Bundle\\KanbanizeClientBundle\\": "Tests/"
+            "Tests\\Chaplean\\Bundle\\KanbanizeApiClientBundle\\": "Tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://satis.chaplean.coop"
-        }
-    ],
     "require": {
         "php": ">=7.1",
         "symfony/config": "^3.0 || ^4.0",
         "symfony/console": "^3.0 || ^4.0",
         "symfony/dependency-injection": "^3.0 || ^4.0",
         "symfony/yaml": "^3.0 || ^4.0",
-        "chaplean/rest-client-bundle": "^4.0"
+        "chaplean/api-client-bundle": "^1.1"
     },
     "require-dev": {
         "chaplean/coding-standard": "^1.1",
-        "mockery/mockery": "dev-master",
+        "mockery/mockery": "^1.2",
+        "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^7.0",
         "symfony/http-kernel": "^2.8 || ^3.0 || ^4.0",
         "symfony/var-dumper": "^2.8 || ^3.0 || ^4.0"
