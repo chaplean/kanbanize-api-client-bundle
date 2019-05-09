@@ -6,8 +6,8 @@ Breaking changes:
     **None**
     
 New features:
-* Partial implementation of the version 1 and 2 of Kanbanize Api
-    * For version 1 Api, you can:
+* Partial implementation of the version 1 and 2 of Kanbanize API
+    * For version 1 API, you can:
         * Get projects and boards
         * Get board structure
         * Get full board structure
@@ -18,7 +18,7 @@ New features:
         * Get details for many task
         * Get all tasks for one board
         * Get log time activities
-    * For version 2 Api, you can:
+    * For version 2 API, you can:
         * Get a list of child cards
         * Make a card a child of a given card 
         * Get a list of parent cards
