@@ -20,7 +20,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  * @method Route postTaskDetails()        Get details for one task    ( https://kanbanize.com/api/#get_task_details )
  * @method Route postTasksDetails()       Get details for many task   ( https://kanbanize.com/api/#get_task_details )
  * @method Route postAllTasks()           Get all tasks for one board ( https://kanbanize.com/api/#get_all_tasks )
- * @method Route postLogTimeActivities()  Create a new task           ( https://kanbanize.com/api/#get_log_time_activities )
+ * @method Route postLogTimeActivities()  Get log time activities     ( https://kanbanize.com/api/#get_log_time_activities )
  *
  * @package   Chaplean\Bundle\KanbanizeApiClientBundle\Api
  * @author    Valentin - Chaplean <valentin@chaplean.coop>

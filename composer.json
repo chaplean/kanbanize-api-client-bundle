@@ -22,7 +22,6 @@
     "require": {
         "php": ">=7.1",
         "symfony/config": "^3.0 || ^4.0",
-        "symfony/console": "^3.0 || ^4.0",
         "symfony/dependency-injection": "^3.0 || ^4.0",
         "symfony/yaml": "^3.0 || ^4.0",
         "chaplean/api-client-bundle": "^1.1"
@@ -31,7 +30,7 @@
         "chaplean/coding-standard": "^1.1",
         "mockery/mockery": "^1.2",
         "php-coveralls/php-coveralls": "^2.1",
-        "phpunit/phpunit": "^7.0",
+        "phpunit/phpunit": "^5.0 || ^6.0 || ^7.0 || ^8.0",
         "symfony/http-kernel": "^2.8 || ^3.0 || ^4.0",
         "symfony/var-dumper": "^2.8 || ^3.0 || ^4.0"
     },

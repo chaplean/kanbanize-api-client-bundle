@@ -1,9 +1,7 @@
-# ⚠ Bundle in progress ⚠
-
 # ChapleanKanbanizeApiClientBundle
 
-> CI Badges. [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/kanbanize-api-client-bundle/issues)
-
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/chaplean/kanbanize-api-client-bundle/issues)
+[![Coverage Status](https://coveralls.io/repos/github/chaplean/kanbanize-api-client-bundle/badge.svg?branch=master)](https://coveralls.io/github/chaplean/kanbanize-api-client-bundle?branch=master)
 
 
 ## Table of content
@@ -18,30 +16,26 @@
 
 ## Installation
 
-> Instructions to install the project. For bundles it might be something along the lines of:
-
-You can use [composer](https://getcomposer.org) to install [projectname]:
+You can use [composer](https://getcomposer.org) to install this:
 ```bash
 composer require chaplean/kanbanize-api-client-bundle
 ```
 
 ## Configuration
 
-#### Define parameters
-
-In your `parameters.yml`
+Define parameters in your `parameters.yml`
 
 ```yaml
-chaplean_kanbanize_api_v1.url: 'kanbanize url api (v1)'
-chaplean_kanbanize_api_v2.url: 'kanbanize url api (v2)'
-chaplean_kanbanize_api.apikey: 'your apikey'
+chaplean_kanbanize_api.apikey: 'your apikey' # A default apikey of an kanbanize user
+chaplean_kanbanize_api_v1.url: 'kanbanize url api v1' # Probably: https://<your team>.kanbanize.com/index.php/api/kanbanize/
+chaplean_kanbanize_api_v2.url: 'kanbanize url api v2' # Probably: https://<your team>.kanbanize.com/api/v2/
 ```
 
 ## Usage
 
 You can use 2 versions of the API.
 
-Version 1: `KanbanizeApiV1` (see: https://kanbanize.com/api)
+**Version 1**: `KanbanizeApiV1` (see: https://kanbanize.com/api)
 
 Available routes:
 
@@ -56,9 +50,9 @@ Available routes:
 | postTaskDetails()        | Get details for one task    |
 | postTasksDetails()       | Get details for many task   |
 | postAllTasks()           | Get all tasks for one board |
-| postLogTimeActivities()  | Create a new task           |
+| postLogTimeActivities()  | Get log time activities     |
 
-Version 2 (beta): `KanbanizeApiV2` (see: https://\<your team>.kanbanize.com/openapi/#/)
+**Version 2** (beta): `KanbanizeApiV2` (see: https://\<your team>.kanbanize.com/openapi/#/)
 
 Available functions:
 
@@ -94,8 +88,6 @@ Contributions are welcomed! There are many ways to contribute, and we appreciate
 As a reminder, all contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Hacking
-
-> When applicable describe how to perform various common actions when working on the project. For example:
 
 You might find the following commands usefull when hacking on this project:
 
