@@ -30,3 +30,15 @@ New features:
         
 Bug fixes:
     **None**
+
+## v1.0.1
+
+Breaking changes:
+    **None**
+    
+New features:
+* `postCreateTask` updated:
+    * Optional request parameters `workflow`, `workflowid` and `workflowname` added.
+        
+Bug fixes:
+    **None**

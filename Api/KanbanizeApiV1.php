@@ -109,17 +109,22 @@ class KanbanizeApiV1 extends AbstractApi
                 'extlink'           => Parameter::string()->optional(),
                 'type'              => Parameter::string()->optional(),
                 'template'          => Parameter::string()->optional(),
-                'subtasks'          => Parameter::arrayList(Parameter::object(
-                    [
-                        'title'    => Parameter::string()->optional(),
-                        'assignee' => Parameter::string()->optional(),
-                    ]
-                ))->optional(),
+                'subtasks'          => Parameter::arrayList(
+                    Parameter::object(
+                        [
+                            'title'    => Parameter::string()->optional(),
+                            'assignee' => Parameter::string()->optional(),
+                        ]
+                    )
+                )->optional(),
                 'column'            => Parameter::string()->optional(),
                 'lane'              => Parameter::string()->optional(),
                 'posiiton'          => Parameter::int()->optional(),
                 'exceedingreason'   => Parameter::bool()->optional(),
                 'returntaskdetails' => Parameter::int()->optional(),
+                'workflow'          => Parameter::int()->optional(),
+                'workflowid'        => Parameter::int()->optional(),
+                'workflowname'      => Parameter::string()->optional(),
             ])->allowExtraRequestParameters();
 
         $this->post('taskDetails', 'get_task_details')
