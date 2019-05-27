@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.1
+
+Breaking changes:
+    **None**
+    
+New features:
+* `postCreateTask` updated:
+    * Optional request parameters `workflow`, `workflowid` and `workflowname` added.
+        
+Bug fixes:
+    **None**
+
 ## v1.0.0
 
 Breaking changes:
@@ -27,18 +39,6 @@ New features:
         * Make a card a predecessor of a given card 
         * Get a list of successor cards
         * Make a card a successor of a given card 
-        
-Bug fixes:
-    **None**
-
-## v1.0.1
-
-Breaking changes:
-    **None**
-    
-New features:
-* `postCreateTask` updated:
-    * Optional request parameters `workflow`, `workflowid` and `workflowname` added.
         
 Bug fixes:
     **None**
