@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.1.0
+
+Breaking changes:
+    **None**
+    
+New features:
+* `postCreateTask` updated:
+    * Optional request parameters `workflow`, `workflowid` and `workflowname` added.
+        
+Bug fixes:
+    **None**
+
 ## v1.0.0
 
 Breaking changes:

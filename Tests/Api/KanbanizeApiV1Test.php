@@ -337,6 +337,25 @@ class KanbanizeApiV1Test extends MockeryTestCase
      *
      * @return void
      */
+    public function testPostCreateNewTaskWithWorkflowField(): void
+    {
+        $response = $this->api->postCreateTask()
+            ->bindRequestParameters([
+                'boardid'      => 1,
+                'workflow'     => 1,
+                'workflowid'   => 1,
+                'workflowname' => 'Initiatives cards',
+            ])
+            ->exec();
+
+        $this->assertNotInstanceOf(InvalidParameterResponse::class, $response);
+    }
+
+    /**
+     * @covers \Chaplean\Bundle\KanbanizeApiClientBundle\Api\KanbanizeApiV1
+     *
+     * @return void
+     */
     public function testGetTaskDetailsMissingRequiredParameter(): void
     {
         $response = $this->api->postTaskDetails()
