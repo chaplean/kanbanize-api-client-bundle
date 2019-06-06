@@ -344,7 +344,7 @@ class KanbanizeApiV1Test extends MockeryTestCase
                 'boardid'      => 1,
                 'workflow'     => 1,
                 'workflowid'   => 1,
-                'workflowname' => 'Intiatives cards',
+                'workflowname' => 'Initiatives cards',
             ])
             ->exec();
 
